@@ -20,16 +20,18 @@
       color: #e6eef6;
     }
     *{box-sizing:border-box}
-   html, body {
-    height: 100%;
-    margin: 0;
-    background: url('img/fondo.jpeg') no-repeat center center fixed, #000000;
-    background-size: cover;
-    background-color: #000000;
-    background-size: 100% 120%; /* La imagen llega hasta la mitad */
-    background-attachment: scroll;
-}
-    .container{max-width:var(--maxw);margin:0 auto;padding:28px}/* Header */
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #000000; /* negro de base */
+  background-image: url('img/fondo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #e6eef6;
+}    
+.container{max-width:var(--maxw);margin:0 auto;padding:28px}/* Header */
 header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2b6fb3);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
