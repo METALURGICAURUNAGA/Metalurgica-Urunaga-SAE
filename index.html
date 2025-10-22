@@ -68,34 +68,43 @@ p.lead{margin:0;color:var(--muted);font-size:13px}  nav{display:flex;gap:12px}
 
 /* Gallery /
 .galeria {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 15px;
-padding: 20px;
-justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px 0;
 }
+
 .item {
-background-color: rgba(0, 0, 0, 0.4);
-border-radius: 10px;
-padding: 10px;
-text-align: center;
-transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .item:hover {
-transform: scale(1.03);
-background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.03);
+  background-color: rgba(0, 0, 0, 0.6);
 }
+
 .galeria img,
 .galeria video {
-width: 100%;
-height: 220px;
-object-fit: cover;
-border-radius: 8px;
+  width: 100%;
+  max-width: 240px; /* ancho máximo uniforme */
+  height: 180px;    /* altura fija */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
+
 .item p {
-color: #ddd;
-margin-top: 8px;
-font-size: 14px;
+  color: #ddd;
+  margin-top: 8px;
+  font-size: 14px;
 }
 / Contact */
 .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
@@ -130,14 +139,15 @@ nav{width:100%;overflow:auto}
 <body>  
   <div class="container">  
     <header>  
-      <div class="brand">  
-A<div class="logo">  
-  <img src="img/logo.png" alt="Logo Metalúrgica Urunaga" />  
-</div>        </div>  
-        <div>  
-          <h1>Metalúrgica Urunaga</h1>  
-          <p class="lead">Torneado y fresado en general — Ñemby, barrio Caaguazú</p>  
-        </div>  
+<div class="brand">  
+  <div class="logo">  
+    <img src="img/logo.png" alt="Logo Metalúrgica Urunaga" />  
+  </div>        
+  <div>  
+    <h1>Metalúrgica Urunaga</h1>  
+    <p class="lead">Torneado y fresado en general — Ñemby, barrio Caaguazú</p>  
+  </div>
+</div>
       </div><nav>  
     <a class="navlink" href="#inicio">Inicio</a>  
     <a class="navlink" href="#servicios">Servicios</a>  
