@@ -1,9 +1,8 @@
 <!doctype html>
-
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Metalúrgica Urunaga — Torneado y Fresado</title>
   <meta name="description" content="Metalúrgica Urunaga — Torneado y fresado en general. Ñemby, barrio Caaguazú. Contacto: 0981 927 904"/>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a2540'/%3E%3Ctext x='50' y='57' font-size='42' text-anchor='middle' fill='%231e90ff' font-family='Arial, Helvetica, sans-serif'%3EU%3C/text%3E%3C/svg%3E"/>
@@ -16,267 +15,285 @@
       --glass: rgba(255,255,255,0.03);
       --radius:16px;
       --maxw:1100px;
+      --logo-size:64px; /* tamaño del logo */
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
       color: #e6eef6;
     }
     *{box-sizing:border-box}
-html, body {
-  margin: 0;
-  min-height: 100%;
-  background-color: #000000; /* negro de base */
-  background-image: url('img/fondo.jpeg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #e6eef6;
-}    
-.container{max-width:var(--maxw);margin:0 auto;padding:28px}/* Header */
-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  background: none; /* quita el color de fondo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}.logo svg{width:40px;height:40px}
-h1{font-size:20px;margin:0}
-p.lead{margin:0;color:var(--muted);font-size:13px}
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #000000; /* negro de base */
+      background-image: url('img/fondo.jpeg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #e6eef6;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo {
+      width: var(--logo-size);
+      height: var(--logo-size);
+      border-radius: 12px;
+      background: none; /* quita el color de fondo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* evita que la imagen se salga y se corte */
+    }
+    .logo img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* conserva toda la imagen sin recortarla */
+      display: block;
+    }
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
 
-nav{display:flex;gap:12px}
-.navlink{color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
-.navlink:hover{background:var(--glass);color:var(--accent)}
+    nav{display:flex;gap:12px}
+    .navlink{color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
+    .navlink:hover{background:var(--glass);color:var(--accent)}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-.hero h2{margin:0 0 10px 0;font-size:28px}
-.hero p{color:var(--muted);line-height:1.5}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero h2{margin:0 0 10px 0;font-size:28px}
+    .hero p{color:var(--muted);line-height:1.5}
 
-.cta{display:flex;gap:12px;margin-top:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
-.btn-primary{background:linear-gradient(90deg,var(--accent),#2b6fb3);color:#071226}
-.btn-light{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#2b6fb3);color:#071226}
+    .btn-light{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)}
 
-/* Services */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-.service{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
-.service h3{margin:0 0 8px 0}
-.service p{margin:0;color:var(--muted);font-size:14px}
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .service{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .service h3{margin:0 0 8px 0}
+    .service p{margin:0;color:var(--muted);font-size:14px}
 
-/* Gallery */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  justify-items: center;
-}
-.item {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  transition: 0.3s;
-}
-.item:hover {
-  transform: scale(1.03);
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.galeria img,
-.galeria video {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.item p {
-  color: #ddd;
-  margin-top: 8px;
-  font-size: 14px;
-}
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
-.contact-card{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
-.info-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.icon{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center}
-.muted{color:var(--muted)}
+    /* Gallery */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      justify-items: center;
+    }
+    .item {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .item:hover {
+      transform: scale(1.03);
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .galeria img,
+    .galeria video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .item p {
+      color: #ddd;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
+    .contact-card{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .info-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .icon{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center}
+    .muted{color:var(--muted)}
 
-form .field{display:flex;flex-direction:column;margin-bottom:12px}
-input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:inherit}
-textarea{min-height:120px}
+    form .field{display:flex;flex-direction:column;margin-bottom:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:inherit}
+    textarea{min-height:120px}
 
-footer{margin:32px 0 12px 0;color:var(--muted);text-align:center;font-size:13px}
+    footer{margin:32px 0 12px 0;color:var(--muted);text-align:center;font-size:13px}
 
-/* Floating WhatsApp */
-.whatsapp{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),#2b6fb3);width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(2,6,23,0.5);z-index:40}
+    /* Floating WhatsApp */
+    .whatsapp{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),#2b6fb3);width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(2,6,23,0.5);z-index:40}
 
-/* Responsive */
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .services{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:520px){
-  header{flex-direction:column;align-items:flex-start}
-  nav{width:100%;overflow:auto}
-}
-
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      /* evita problemas de parallax/scroll en móviles */
+      html, body { background-attachment: scroll; }
+    }
+    @media (max-width:520px){
+      header{flex-direction:column;align-items:flex-start}
+      nav{width:100%;overflow:auto}
+      /* reduce logo en pantallas pequeñas */
+      :root { --logo-size:48px; }
+      h1{font-size:18px}
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="brand">
-A<div class="logo">
-  <img src="img/logo.png" alt="Logo Metalúrgica Urunaga" />
-</div>        </div>
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo Metalúrgica Urunaga" />
+        </div>
         <div>
           <h1>Metalúrgica Urunaga</h1>
           <p class="lead">Torneado y fresado en general — Ñemby, barrio Caaguazú</p>
         </div>
-      </div><nav>
-    <a class="navlink" href="#inicio">Inicio</a>
-    <a class="navlink" href="#servicios">Servicios</a>
-    <a class="navlink" href="#galeria">Galería</a>
-    <a class="navlink" href="#contacto">Contacto</a>
-  </nav>
-</header>
-
-<main>
-  <section id="inicio" class="hero">
-    <div class="card">
-      <h2>Soluciones de precisión en torneado y fresado</h2>
-      <p>En <strong>Metalúrgica Urunaga</strong> 🏭 especializamos en tornería industrial y naval, ofreciendo soluciones integrales en mecanizado de precisión. Contamos con una amplia experiencia en el sector y un taller equipado, que nos permite abarcar desde piezas de alta precisión hasta trabajos pesados. 🔧 Comprometidos con la innovación, la eficiencia y la excelencia en cada proyecto.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://wa.me/595981927904" target="_blank" rel="noopener">📲 Contactar por WhatsApp</a>
-        <a class="btn btn-light" href="#contacto">✉️ Consultar por email</a>
       </div>
+      <nav>
+        <a class="navlink" href="#inicio">Inicio</a>
+        <a class="navlink" href="#servicios">Servicios</a>
+        <a class="navlink" href="#galeria">Galería</a>
+        <a class="navlink" href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-      <div style="margin-top:18px;color:var(--muted);font-size:14px">
-        <strong>Horario:</strong> Lun-Vie 08:00 – 12:00 y 12:00 - 18:00 · <strong>Atención por WhatsApp</strong>
-      </div>
-    </div>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="card">
+          <h2>Soluciones de precisión en torneado y fresado</h2>
+          <p>En <strong>Metalúrgica Urunaga</strong> 🏭 especializamos en tornería industrial y naval, ofreciendo soluciones integrales en mecanizado de precisión. Contamos con una amplia experiencia en el sector y un taller equipado, que nos permite abarcar desde piezas de alta precisión hasta trabajos pesados. 🔧 Comprometidos con la innovación, la eficiencia y la excelencia en cada proyecto.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://wa.me/595981927904" target="_blank" rel="noopener">📲 Contactar por WhatsApp</a>
+            <a class="btn btn-light" href="#contacto">✉️ Consultar por email</a>
+          </div>
 
-    <aside class="card" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-      <div style="width:100%;background:linear-gradient(90deg,#071226,rgba(16,30,50,0.6));padding:12px;border-radius:12px;">
-        <strong style="font-size:15px">Servicios rápidos</strong>
-        <p class="muted" style="margin:6px 0 0 0;font-size:13px">Torneado y fresado, reparaciones, mecanizado por encargo.</p>
-      </div>
-
-      <div style="width:100%;padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
-        <strong style="font-size:15px">Contacto</strong>
-        <div class="muted" style="margin-top:6px">Tel/WhatsApp: 0981 927 904<br>Email: <a href="mailto:metalurgicaurunagaeas@gmail.com" style="color:var(--accent);text-decoration:none">metalurgicaurunagaeas@gmail.com</a></div>
-      </div>
-
-      <div style="width:100%;padding:12px;border-radius:12px;background:rgba(255,255,255,0.01);font-size:13px;color:var(--muted)">Ubicación: Ñemby · Barrio Caaguazú</div>
-    </aside>
-  </section>
-
-  <section id="servicios" class="card" style="margin-top:18px">
-    <h2 style="margin:0 0 12px 0">Servicios</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Torneado de precisión</h3>
-        <p>Fabricación y reparación de piezas torneadas en una amplia variedad de metales.</p>
-      </div>
-      <div class="service">
-        <h3>Fresado y mecanizado</h3>
-        <p>Fresado por encargo para piezas únicas y series cortas con tolerancias ajustadas.</p>
-      </div>
-      <div class="service">
-        <h3>Reparaciones industriales</h3>
-        <p>Reparación y ajuste de componentes mecánicos ,ejes y maquinarias.</p>
-      </div>
-      <div class="service">
-        <h3>torneado naval</h3>
-        <p>torneado de piezas de gran porte, engranajes de todo tipo.</p>
-      </div>
-      <div class="service">
-        <h3>Mecanizado C.N.C</h3>
-        <p>Contamos con una amplia variedad de maquinas e quipamiento industrial con control numerico C.N.C.</p>
-    </div>
-  </section>
-
-  <section id="galeria">
-      <h2 style="margin-top:18px">Galería de Trabajos</h2>
-<div class="galeria">
-  <!-- Fotos -->
-  <div class="item"><img src="img/foto1.jpeg" alt="Trabajo 1"><p>Trabajo 1</p></div>
-  <div class="item"><img src="img/foto2.jpeg" alt="Trabajo 2"><p>Trabajo 2</p></div>
-  <div class="item"><img src="img/foto3.jpeg" alt="Trabajo 3"><p>Trabajo 3</p></div>
-  <div class="item"><img src="img/foto4.jpeg" alt="Trabajo 4"><p>Trabajo 4</p></div>
-  <div class="item"><img src="img/foto5.jpeg" alt="Trabajo 5"><p>Trabajo 5</p></div>
-  <div class="item"><img src="img/foto6.jpeg" alt="Trabajo 6"><p>Trabajo 6</p></div>
-  <div class="item"><video src="img/video1.mp4" controls muted></video><p>Video 1</p></div>
-  <div class="item"><video src="img/video2.mp4" controls muted></video><p>Video 2</p></div>
-  <div class="item"><video src="img/video3.mp4" controls muted></video><p>Video 3</p></div>
-  <div class="item"><video src="img/video4.mp4" controls muted></video><p>Video 4</p></div>
-  <div class="item"><video src="img/video5.mp4" controls muted></video><p>Video 5</p></div>
-  <div class="item"><video src="img/video6.mp4" controls muted></video><p>Video 6</p></div>
-     </div>
-  </section>
-
-  <section id="contacto" class="contact-grid">
-    <div class="contact-card card">
-      <h2>Contacto</h2>
-      <div class="info-row">
-        <div class="icon">📞</div>
-        <div>
-          <div style="font-weight:700">WhatsApp</div>
-          <div class="muted">+595 981 927 904</div>
+          <div style="margin-top:18px;color:var(--muted);font-size:14px">
+            <strong>Horario:</strong> Lun-Vie 08:00 – 12:00 y 12:00 - 18:00 · <strong>Atención por WhatsApp</strong>
+          </div>
         </div>
-      </div>
 
-      <div class="info-row">
-        <div class="icon">✉️</div>
-        <div>
-          <div style="font-weight:700">Correo</div>
-          <div class="muted">metalurgicaurunagaeas@gmail.com</div>
+        <aside class="card" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <div style="width:100%;background:linear-gradient(90deg,#071226,rgba(16,30,50,0.6));padding:12px;border-radius:12px;">
+            <strong style="font-size:15px">Servicios rápidos</strong>
+            <p class="muted" style="margin:6px 0 0 0;font-size:13px">Torneado y fresado, reparaciones, mecanizado por encargo.</p>
+          </div>
+
+          <div style="width:100%;padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
+            <strong style="font-size:15px">Contacto</strong>
+            <div class="muted" style="margin-top:6px">Tel/WhatsApp: 0981 927 904<br>Email: <a href="mailto:metalurgicaurunagaeas@gmail.com" style="color:var(--accent);text-decoration:none">metalurgicaurunagaeas@gmail.com</a></div>
+          </div>
+
+          <div style="width:100%;padding:12px;border-radius:12px;background:rgba(255,255,255,0.01);font-size:13px;color:var(--muted)">Ubicación: Ñemby · Barrio Caaguazú</div>
+        </aside>
+      </section>
+
+      <section id="servicios" class="card" style="margin-top:18px">
+        <h2 style="margin:0 0 12px 0">Servicios</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Torneado de precisión</h3>
+            <p>Fabricación y reparación de piezas torneadas en una amplia variedad de metales.</p>
+          </div>
+          <div class="service">
+            <h3>Fresado y mecanizado</h3>
+            <p>Fresado por encargo para piezas únicas y series cortas con tolerancias ajustadas.</p>
+          </div>
+          <div class="service">
+            <h3>Reparaciones industriales</h3>
+            <p>Reparación y ajuste de componentes mecánicos ,ejes y maquinarias.</p>
+          </div>
+          <div class="service">
+            <h3>torneado naval</h3>
+            <p>torneado de piezas de gran porte, engranajes de todo tipo.</p>
+          </div>
+          <div class="service">
+            <h3>Mecanizado C.N.C</h3>
+            <p>Contamos con una amplia variedad de maquinas e quipamiento industrial con control numerico C.N.C.</p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="info-row">
-        <div class="icon">📍</div>
-        <div>
-          <a href="https://maps.app.goo.gl/N6cn1KEkfSyCw1AN6" target="_blank" class="boton-maps">
-  📍 Ver ubicación en Google Maps
-</a>
-          <div class="muted">Ñemby — Barrio Caaguazú</div>
+      <section id="galeria">
+        <h2 style="margin-top:18px">Galería de Trabajos</h2>
+        <div class="galeria">
+          <!-- Fotos -->
+          <div class="item"><img src="img/foto1.jpeg" alt="Trabajo 1"><p>Trabajo 1</p></div>
+          <div class="item"><img src="img/foto2.jpeg" alt="Trabajo 2"><p>Trabajo 2</p></div>
+          <div class="item"><img src="img/foto3.jpeg" alt="Trabajo 3"><p>Trabajo 3</p></div>
+          <div class="item"><img src="img/foto4.jpeg" alt="Trabajo 4"><p>Trabajo 4</p></div>
+          <div class="item"><img src="img/foto5.jpeg" alt="Trabajo 5"><p>Trabajo 5</p></div>
+          <div class="item"><img src="img/foto6.jpeg" alt="Trabajo 6"><p>Trabajo 6</p></div>
+          <div class="item"><video src="img/video1.mp4" controls muted></video><p>Video 1</p></div>
+          <div class="item"><video src="img/video2.mp4" controls muted></video><p>Video 2</p></div>
+          <div class="item"><video src="img/video3.mp4" controls muted></video><p>Video 3</p></div>
+          <div class="item"><video src="img/video4.mp4" controls muted></video><p>Video 4</p></div>
+          <div class="item"><video src="img/video5.mp4" controls muted></video><p>Video 5</p></div>
+          <div class="item"><video src="img/video6.mp4" controls muted></video><p>Video 6</p></div>
         </div>
-      </div>
+      </section>
 
-      <div style="margin-top:12px;color:var(--muted);font-size:13px">Si preferís, enviá un mensaje por WhatsApp con tu consulta y respondemos rápido.</div>
-    </div>
+      <section id="contacto" class="contact-grid">
+        <div class="contact-card card">
+          <h2>Contacto</h2>
+          <div class="info-row">
+            <div class="icon">📞</div>
+            <div>
+              <div style="font-weight:700">WhatsApp</div>
+              <div class="muted">+595 981 927 904</div>
+            </div>
+          </div>
 
-    <aside class="card contact-card">
-      <h3>Enviar consulta</h3>
-      <form onsubmit="event.preventDefault(); window.open('https://wa.me/595981927904?text='+encodeURIComponent('Hola, quiero consultar sobre...'))">
-        <div class="field"><label class="muted">Nombre</label><input placeholder="Tu nombre" required></div>
-        <div class="field"><label class="muted">Teléfono</label><input placeholder="Opcional"></div>
-        <div class="field"><label class="muted">Mensaje</label><textarea placeholder="Escribí tu consulta" required></textarea></div>
-        <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
-      </form>
-    </aside>
-  </section>
+          <div class="info-row">
+            <div class="icon">✉️</div>
+            <div>
+              <div style="font-weight:700">Correo</div>
+              <div class="muted">metalurgicaurunagaeas@gmail.com</div>
+            </div>
+          </div>
 
-</main>
+          <div class="info-row">
+            <div class="icon">📍</div>
+            <div>
+              <a href="https://maps.app.goo.gl/N6cn1KEkfSyCw1AN6" target="_blank" class="boton-maps">
+                📍 Ver ubicación en Google Maps
+              </a>
+              <div class="muted">Ñemby — Barrio Caaguazú</div>
+            </div>
+          </div>
 
-<footer>
-  © <span id="year"></span> Metalúrgica Urunaga — Torneado y fresado · Ñemby · Contacto: 0981 927 904
-</footer>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Si preferís, enviá un mensaje por WhatsApp con tu consulta y respondemos rápido.</div>
+        </div>
 
-  </div>  <a class="whatsapp" href="https://wa.me/595981927904" target="_blank" aria-label="WhatsApp">
+        <aside class="card contact-card">
+          <h3>Enviar consulta</h3>
+          <form onsubmit="event.preventDefault(); window.open('https://wa.me/595981927904?text='+encodeURIComponent('Hola, quiero consultar sobre...'))">
+            <div class="field"><label class="muted">Nombre</label><input placeholder="Tu nombre" required></div>
+            <div class="field"><label class="muted">Teléfono</label><input placeholder="Opcional"></div>
+            <div class="field"><label class="muted">Mensaje</label><textarea placeholder="Escribí tu consulta" required></textarea></div>
+            <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+          </form>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Metalúrgica Urunaga — Torneado y fresado · Ñemby · Contacto: 0981 927 904
+    </footer>
+  </div>
+
+  <a class="whatsapp" href="https://wa.me/595981927904" target="_blank" aria-label="WhatsApp">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.52 3.48A11.9 11.9 0 0012 .5 11.9 11.9 0 003.48 3.48 11.9 11.9 0 00.5 12c0 2.12.55 4.2 1.6 6.03L.5 23.5l5.6-1.44A11.94 11.94 0 0012 23.5c3.18 0 6.18-1.24 8.45-3.5 2.27-2.27 3.5-5.27 3.5-8.45 0-3.18-1.24-6.18-3.5-8.45z" fill="white" opacity="0.05"/><path d="M17.2 14.1c-.3-.15-1.8-.9-2.07-1-.27-.1-.47-.15-.67.15-.2.3-.8 1-.98 1.2-.18.2-.36.22-.66.08-.3-.15-1.26-.47-2.4-1.48-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.12-.61.12-.11.27-.27.4-.4.13-.13.17-.22.27-.37.1-.15.05-.28-.02-.4-.07-.12-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51-.18-.01-.38-.01-.58-.01-.2 0-.52.07-.8.37-.28.3-1.08 1.06-1.08 2.58 0 1.52 1.1 2.98 1.26 3.18.16.2 2.18 3.3 5.28 4.62 3.1 1.32 3.1.88 3.66.82.56-.06 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.47-.08-.13-.27-.2-.57-.35z" fill="white"/></svg>
-  </a>  <script>
+  </a>
+
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     // smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth',block:'start'});});
     });
-  </script></body>
+  </script>
+</body>
 </html>
