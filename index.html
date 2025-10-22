@@ -51,9 +51,36 @@ nav{display:flex;gap:12px}
 .service p{margin:0;color:var(--muted);font-size:14px}
 
 /* Gallery */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
-.photo{height:120px;border-radius:10px;background:linear-gradient(180deg,#081226,#091427);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
-
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+}
+.item {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+.item:hover {
+  transform: scale(1.03);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.galeria img,
+.galeria video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.item p {
+  color: #ddd;
+  margin-top: 8px;
+  font-size: 14px;
+}
 /* Contact */
 .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
 .contact-card{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
