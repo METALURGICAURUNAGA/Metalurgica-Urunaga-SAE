@@ -35,22 +35,24 @@
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
+/* DEBUG: forzar tamaño visible del logo */
 .logo {
-  width: var(--logo-size);
-  height: var(--logo-size);
-  border-radius: 96px;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  width: 140px !important;   /* prueba con 140px — cambiá si querés */
+  height: 140px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  outline: 3px solid rgba(255,0,128,0.45) !important; /* borde temporal para ver contenedor */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+  width: auto !important;    /* evita que una regla previa la fuerce a 100% */
+  height: 100% !important;   /* escala la imagen a la altura del contenedor */
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
 }
     h1{font-size:20px;margin:0}
     p.lead{margin:0;color:var(--muted);font-size:13px}
@@ -165,7 +167,7 @@
       <section id="inicio" class="hero">
         <div class="card">
           <h2>Soluciones de precisión en torneado y fresado</h2>
-          <p>En <strong>Metalúrgica Urunaga</strong> 🏭 especializamos en tornería industrial y naval, ofreciendo soluciones integrales en mecanizado de precisión. Contamos con una amplia experiencia en el sector y un taller equipado, que nos permite abarcar desde piezas de alta precisión hasta trabajos pesados. 🔧 Comprometidos con la innovación, la eficiencia y la excelencia en cada proyecto.</p>
+          <p>En <strong>Metalúrgica Urunaga</strong> 🏭 nos especializamos en tornería industrial y naval, ofreciendo soluciones integrales en mecanizado de precisión. Contamos con una amplia experiencia en el sector y un taller equipado, que nos permite abarcar desde piezas de alta precisión hasta trabajos pesados. 🔧 Comprometidos con la innovación, la eficiencia y la excelencia en cada proyecto.</p>
           <div class="cta">
             <a class="btn btn-primary" href="https://wa.me/595981927904" target="_blank" rel="noopener">📲 Contactar por WhatsApp</a>
             <a class="btn btn-light" href="#contacto">✉️ Consultar por email</a>
