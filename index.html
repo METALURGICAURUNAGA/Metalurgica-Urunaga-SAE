@@ -20,12 +20,14 @@
       color: #e6eef6;
     }
     *{box-sizing:border-box}
-    html, body {
-  height: 100%;
-  margin: 0;
-background: url('img/fondo.jpeg') no-repeat center center fixed;
-background-size: cover;  background-size: 110% 150%; /* La imagen llega hasta la mitad */
-  background-attachment: scroll;
+   html, body {
+    height: 100%;
+    margin: 0;
+    background: url('img/fondo.jpeg') no-repeat center center fixed, #000000;
+    background-size: cover;
+    background-color: #000000;
+    background-size: 100% 120%; /* La imagen llega hasta la mitad */
+    background-attachment: scroll;
 }
     .container{max-width:var(--maxw);margin:0 auto;padding:28px}/* Header */
 header{display:flex;align-items:center;justify-content:space-between;gap:16px}
