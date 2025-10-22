@@ -35,16 +35,16 @@ html, body {
 header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
   background: none; /* quita el color de fondo */
   display: flex;
   align-items: center;
   justify-content: center;
-}.logo svg{width:40px;height:40px}
-h1{font-size:20px;margin:0}
-p.lead{margin:0;color:var(--muted);font-size:13px}
+}.logo svg{width:50px;height:50px}
+h1{font-size:30px;margin:0}
+p.lead{margin:0;color:var(--muted);font-size:15px}
 
 nav{display:flex;gap:12px}
 .navlink{color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
@@ -130,40 +130,28 @@ footer{margin:32px 0 12px 0;color:var(--muted);text-align:center;font-size:13px}
 </head>
 <body>
   <div class="container">
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 8px;
-}
+    <header>
+      <div class="brand">
+A<div class="logo">
+  <img src="img/logo.png" alt="Logo Metalúrgica Urunaga" />
+</div>        </div>
+        <div>
+          <h1>Metalúrgica Urunaga</h1>
+          <p class="lead">Torneado y fresado en general — Ñemby, barrio Caaguazú</p>
+        </div>
+      </div><nav>
+    <a class="navlink" href="#inicio">Inicio</a>
+    <a class="navlink" href="#servicios">Servicios</a>
+    <a class="navlink" href="#galeria">Galería</a>
+    <a class="navlink" href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 8px;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}<main>
+<main>
   <section id="inicio" class="hero">
     <div class="card">
       <h2>Soluciones de precisión en torneado y fresado</h2>
-      <p>En <strong>Metalúrgica Urunaga</strong> trabajamos con piezas por encargo, desde piezas únicas hasta series cortas. Contamos con experiencia en torneado, fresado, y proveedor de piezas para servicios industriales y particulares, enfocados en la inovacion y la mejora continua dia a dia.</p>
+      <p>En <strong>Metalúrgica Urunaga</strong> 🏭 especializamos en tornería industrial y naval, ofreciendo soluciones integrales en mecanizado de precisión. Contamos con una amplia experiencia en el sector y un taller equipado, que nos permite abarcar desde piezas de alta precisión hasta trabajos pesados. 🔧 Comprometidos con la innovación, la eficiencia y la excelencia en cada proyecto.</p>
       <div class="cta">
         <a class="btn btn-primary" href="https://wa.me/595981927904" target="_blank" rel="noopener">📲 Contactar por WhatsApp</a>
         <a class="btn btn-light" href="#contacto">✉️ Consultar por email</a>
