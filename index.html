@@ -36,20 +36,24 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
 /* DEBUG: forzar tamaño visible del logo */
+/* Logo — quitar recuadro de depuración y dejar tamaño grande limpio */
 .logo {
-  width: 140px !important;   /* prueba con 140px — cambiá si querés */
+  width: 140px !important;   /* ajustá este valor si querés otro tamaño */
   height: 140px !important;
   border-radius: 12px !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   overflow: hidden !important;
-  outline: 3px solid rgba(255,0,128,0.45) !important; /* borde temporal para ver contenedor */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
 .logo img {
-  width: auto !important;    /* evita que una regla previa la fuerce a 100% */
-  height: 100% !important;   /* escala la imagen a la altura del contenedor */
+  width: 100% !important;
+  height: 100% !important;
   max-width: none !important;
   object-fit: contain !important;
   display: block !important;
