@@ -20,7 +20,14 @@
       color: #e6eef6;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#030406);}
+    html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7), #030406),
+              url('img/fondo.jpeg') no-repeat center top;
+  background-size: 100% 50%; /* La imagen llega hasta la mitad */
+  background-attachment: scroll;
+}
     .container{max-width:var(--maxw);margin:0 auto;padding:28px}/* Header */
 header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
@@ -135,7 +142,7 @@ footer{margin:32px 0 12px 0;color:var(--muted);text-align:center;font-size:13px}
   <section id="inicio" class="hero">
     <div class="card">
       <h2>Soluciones de precisión en torneado y fresado</h2>
-      <p>En <strong>Metalúrgica Urunaga</strong> trabajamos con piezas por encargo, desde piezas únicas hasta series cortas. Contamos con experiencia en torneado, fresado, y proveedor de piezas para servicios industriales y particulares.</p>
+      <p>En <strong>Metalúrgica Urunaga</strong> trabajamos con piezas por encargo, desde piezas únicas hasta series cortas. Contamos con experiencia en torneado, fresado, y proveedor de piezas para servicios industriales y particulares, enfocados en la inovacion y la mejora continua dia a dia.</p>
       <div class="cta">
         <a class="btn btn-primary" href="https://wa.me/595981927904" target="_blank" rel="noopener">📲 Contactar por WhatsApp</a>
         <a class="btn btn-light" href="#contacto">✉️ Consultar por email</a>
@@ -178,8 +185,11 @@ footer{margin:32px 0 12px 0;color:var(--muted);text-align:center;font-size:13px}
       </div>
       <div class="service">
         <h3>torneado naval</h3>
-        <p>torneado de piezas de gran porte, engranajes etc.</p>
+        <p>torneado de piezas de gran porte, engranajes de todo tipo.</p>
       </div>
+      <div class="service">
+        <h3>Mecanizado C.N.C</h3>
+        <p>Contamos con una amplia variedad de maquinas e quipamiento industrial con control numerico C.N.C.</p>
     </div>
   </section>
 
