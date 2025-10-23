@@ -77,7 +77,12 @@
     .btn-light{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)}
 
     /* Services */
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .services{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
     .service{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
     .service h3{margin:0 0 8px 0}
     .service p{margin:0;color:var(--muted);font-size:14px}
@@ -141,6 +146,9 @@
     .whatsapp{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),#2b6fb3);width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(2,6,23,0.5);z-index:40}
 
     /* Responsive */
+    @media (max-width:1100px){
+      .services{ grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
@@ -157,6 +165,7 @@
       h1{font-size:18px}
       .item { flex: 0 0 220px; min-width: 200px; }
       .galeria img, .galeria video { height: 140px; }
+      .services{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -212,38 +221,49 @@
 
       <section id="servicios" class="card" style="margin-top:18px">
         <h2 style="margin:0 0 12px 0">Servicios</h2>
+
         <div class="services">
           <div class="service">
             <h3>Torneado de precisión</h3>
             <p>Fabricación y reparación de piezas torneadas en una amplia variedad de metales.</p>
           </div>
+
           <div class="service">
             <h3>Fresado y mecanizado</h3>
             <p>Fresado por encargo para piezas únicas y series cortas con tolerancias ajustadas.</p>
           </div>
+
           <div class="service">
             <h3>Reparaciones industriales</h3>
-            <p>Reparación y ajuste de componentes mecánicos ,ejes y maquinarias.</p>
+            <p>Reparación y ajuste de componentes mecánicos, ejes y maquinarias.</p>
           </div>
+
           <div class="service">
             <h3>Torneado naval</h3>
-            <p>torneado de piezas de gran porte, engranajes de todo tipo.</p>
+            <p>Torneado de piezas de gran porte, engranajes de todo tipo.</p>
           </div>
+
           <div class="service">
             <h3>Mecanizado C.N.C</h3>
-            <p>Contamos con una amplia variedad de maquinas e quipamiento industrial con control numerico C.N.C.</p>
-                  <div class="service">
+            <p>Contamos con una amplia variedad de máquinas y equipamiento industrial con control numérico C.N.C.</p>
+          </div>
+
+          <div class="service">
             <h3>Servicios de Asesoramiento</h3>
-            <p>Contamos con personal capacitados para asesoramientos mecanicos, tecnicos industriales. Todo lo referente a ala metalurgica y maquinaria.</p> 
+            <p>Contamos con personal capacitado para asesoramientos mecánicos y técnicos industriales. Todo lo referente a la metalúrgica y maquinaria.</p>
           </div>
-                  <div class="service">
-            <h3>Sevicios de Diseño</h3>
-            <p>Ofrecemos servicios de diseño y elaboracion de planos en 2D y 3D para la fabricaion y proyectos tecnicos.</p> 
+
+          <div class="service">
+            <h3>Servicios de Diseño</h3>
+            <p>Ofrecemos servicios de diseño y elaboración de planos en 2D y 3D para la fabricación y proyectos técnicos.</p>
           </div>
-                   <div class="service">
+
+          <div class="service">
             <h3>Montaje de estructuras</h3>
-            <p>Especializados en la fabricaion y montaje de tinglados a medida, ofrecemos soluciones resistentes y seguras, adaptadas a las necesidades de cada cliente.</p> 
-        </div>
+            <p>Especializados en la fabricación y montaje de tinglados a medida, ofrecemos soluciones resistentes y seguras, adaptadas a las necesidades de cada cliente.</p>
+          </div>
+        </div> <!-- .services -->
+
       </section>
 
       <section id="galeria">
