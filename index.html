@@ -15,11 +15,13 @@
       --glass: rgba(255,255,255,0.03);
       --radius:16px;
       --maxw:1100px;
-      --logo-size:64px; /* tamaño del logo */
+      --logo-size:140px; /* tamaño del logo: aumentado para que se note */
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
       color: #e6eef6;
     }
+
     *{box-sizing:border-box}
+
     html, body {
       margin: 0;
       min-height: 100%;
@@ -31,33 +33,31 @@
       background-attachment: fixed;
       color: #e6eef6;
     }
+
     .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
     /* Header */
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
-/* DEBUG: forzar tamaño visible del logo */
-/* Logo — quitar recuadro de depuración y dejar tamaño grande limpio */
-.logo {
-  width: 140px !important;   /* ajustá este valor si querés otro tamaño */
-  height: 140px !important;
-  border-radius: 12px !important;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
 
-.logo img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  object-fit: contain !important;
-  display: block !important;
-}
+    /* Logo */
+    .logo {
+      width: var(--logo-size);
+      height: var(--logo-size);
+      border-radius: 12px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     h1{font-size:20px;margin:0}
     p.lead{margin:0;color:var(--muted);font-size:13px}
 
@@ -82,37 +82,48 @@
     .service h3{margin:0 0 8px 0}
     .service p{margin:0;color:var(--muted);font-size:14px}
 
-    /* Gallery */
+    /* Galería HORIZONTAL deslizable */
     .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
       gap: 15px;
-      padding: 20px;
-      justify-items: center;
+      padding: 20px 6px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; /* suaviza el scroll en iOS */
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.12) transparent;
+      align-items: flex-start;
     }
+    /* Webkit scrollbar styling (opcional, visual suave) */
+    .galeria::-webkit-scrollbar { height: 10px; }
+    .galeria::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.12);
+      border-radius: 10px;
+    }
+    .galeria::-webkit-scrollbar-track { background: transparent; }
+
     .item {
+      flex: 0 0 300px;       /* ancho del "card" visible */
+      min-width: 220px;
       background-color: rgba(0, 0, 0, 0.4);
       border-radius: 10px;
       padding: 10px;
       text-align: center;
-      transition: 0.3s;
+      transition: transform .18s ease;
+      scroll-snap-align: start;
     }
-    .item:hover {
-      transform: scale(1.03);
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+    .item:hover { transform: translateY(-6px); background-color: rgba(0,0,0,0.6); }
+
     .galeria img,
     .galeria video {
       width: 100%;
-      height: 220px;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
     }
-    .item p {
-      color: #ddd;
-      margin-top: 8px;
-      font-size: 14px;
-    }
+    .item p { color: #ddd; margin-top: 8px; font-size: 14px; }
+
     /* Contact */
     .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
     .contact-card{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02)}
@@ -134,16 +145,18 @@
       .hero{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
       .services{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
       /* evita problemas de parallax/scroll en móviles */
       html, body { background-attachment: scroll; }
+      .galeria { padding-left: 12px; padding-right: 12px; }
     }
     @media (max-width:520px){
       header{flex-direction:column;align-items:flex-start}
       nav{width:100%;overflow:auto}
       /* reduce logo en pantallas pequeñas */
-      :root { --logo-size:48px; }
+      :root { --logo-size:64px; }
       h1{font-size:18px}
+      .item { flex: 0 0 220px; min-width: 200px; }
+      .galeria img, .galeria video { height: 140px; }
     }
   </style>
 </head>
