@@ -33,8 +33,8 @@
   <section id="galeria">
       <h2 style="margin-top:18px">Galería de Trabajos</h2>
 <div class="galeria">
-<!-- Fotos -->
- <div class="item"><img src="img/foto1.jpeg" alt="Trabajo 1"><p>Trabajo 1</p></div>
+  <!-- Fotos -->
+  <div class="item"><img src="img/foto1.jpeg" alt="Trabajo 1"><p>Trabajo 1</p></div>
   <div class="item"><img src="img/foto2.jpeg" alt="Trabajo 2"><p>Trabajo 2</p></div>
   <div class="item"><img src="img/foto3.jpeg" alt="Trabajo 3"><p>Trabajo 3</p></div>
   <div class="item"><img src="img/foto4.jpeg" alt="Trabajo 4"><p>Trabajo 4</p></div>
@@ -48,6 +48,8 @@
   <div class="item"><video src="img/video6.mp4" controls muted></video><p>Video 6</p></div>
      </div>
   </section>
+
+
     <div class="controls">
       <button id="cargar-mas">Cargar más</button>
     </div>
@@ -58,8 +60,8 @@
   <script>
     // Inicializa el loader: cambia listUrl si tu JSON está en otra ruta
     galleryLoader.init({
-      containerId: 'galeria-js',
-      listUrl: '/gallery.json',
+      containerId: 'galeriy-loader.js',
+      listUrl: '/galery.json',
       pageSize: 8,
       typeFilter: null // null = todo (imágenes y videos). Puedes usar 'image' o 'video'
     });
