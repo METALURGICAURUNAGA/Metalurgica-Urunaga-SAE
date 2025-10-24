@@ -1,10 +1,10 @@
 // gallery-loader.js
-// Pequeño loader para cargar gallery.json por páginas y renderizar imágenes y videos.
-// Fácil de usar: llamar galleryLoader.init({containerId, listUrl, pageSize, typeFilter});
-window.galleryLoader = (function(){
+// Pequeño loader para cargar galery.json por páginas y renderizar imágenes y videos.
+// Fácil de usar: llamar galery-loader.js({containerId, listUrl, pageSize, typeFilter});
+window.galeryLoader = (function(){
   let cfg = {}, items = [], page = 0;
   function init(options){
-    cfg = Object.assign({ containerId: 'galeria-js', listUrl: '/gallery.json', pageSize: 8, typeFilter: null }, options || {});
+    cfg = Object.assign({ containerId: 'galeria-js', listUrl: '/galery.json', pageSize: 8, typeFilter: null }, options || {});
     fetchList();
     document.getElementById('cargar-mas')?.addEventListener('click', renderPage);
   }
