@@ -5,6 +5,21 @@
   { "type":"image", "src":"img/foto4.jpeg", "thumb":"img/foto4.jpeg", "alt":"Trabajo 4" },
   { "type":"image", "src":"img/foto5.jpeg", "thumb":"img/foto5.jpeg", "alt":"Trabajo 5" },
   { "type":"image", "src":"img/foto6.jpeg", "thumb":"img/foto6.jpeg", "alt":"Trabajo 6" },
-  { "type":"video", "src":"videos/video1.mp4", "poster":"img/video1-poster.jpg", "alt":"Video 1" },
-  { "type":"video", "src":"videos/video2.mp4", "poster":"img/video2-poster.jpg", "alt":"Video 2" }
+  { "type":"image", "src":"img/foto7.jpeg", "thumb":"img/foto7.jpeg", "alt":"Trabajo 1" },
+  { "type":"image", "src":"img/foto8.jpeg", "thumb":"img/foto8.jpeg", "alt":"Trabajo 2" },
+  { "type":"image", "src":"img/foto9.jpeg", "thumb":"img/foto9.jpeg", "alt":"Trabajo 3" },
+  { "type":"image", "src":"img/foto10.jpeg", "thumb":"img/foto10.jpeg", "alt":"Trabajo 4" },
+  { "type":"image", "src":"img/foto11.jpeg", "thumb":"img/foto11.jpeg", "alt":"Trabajo 5" },
+  { "type":"image", "src":"img/foto12.jpeg", "thumb":"img/foto12.jpeg", "alt":"Trabajo 6" },
+  { "type":"image", "src":"img/foto13.jpeg", "thumb":"img/foto13.jpeg", "alt":"Trabajo 4" },
+  { "type":"image", "src":"img/foto14.jpeg", "thumb":"img/foto14.jpeg", "alt":"Trabajo 5" },
+  { "type":"image", "src":"img/foto15.jpeg", "thumb":"img/foto15.jpeg", "alt":"Trabajo 6" },
+  { "type":"image", "src":"img/foto16.jpeg", "thumb":"img/foto16.jpeg", "alt":"Trabajo 4" },
+  { "type":"image", "src":"img/foto17.jpeg", "thumb":"img/foto17.jpeg", "alt":"Trabajo 5" },
+  { "type":"image", "src":"img/foto18.jpeg", "thumb":"img/foto18.jpeg", "alt":"Trabajo 6" },
+  { "type":"image", "src":"img/foto19.jpeg", "thumb":"img/foto19.jpeg", "alt":"Trabajo 4" },
+  { "type":"image", "src":"img/foto20.jpeg", "thumb":"img/foto20.jpeg", "alt":"Trabajo 5" },
+  { "type":"image", "src":"img/foto21.jpeg", "thumb":"img/foto21.jpeg", "alt":"Trabajo 6" },
+  { "type":"video", "src":"videos/video1.mp4","alt":"Video 1" },
+  { "type":"video", "src":"videos/video2.mp4","alt":"Video 2" }
   // Agrega aquí todos tus archivos (cada objeto = una entrada)
