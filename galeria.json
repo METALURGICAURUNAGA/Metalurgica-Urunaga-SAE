@@ -1,0 +1,10 @@
+[
+  { "type":"image", "src":"img/foto1.jpeg", "thumb":"img/foto1.jpeg", "alt":"Trabajo 1" },
+  { "type":"image", "src":"img/foto2.jpeg", "thumb":"img/foto2.jpeg", "alt":"Trabajo 2" },
+  { "type":"image", "src":"img/foto3.jpeg", "thumb":"img/foto3.jpeg", "alt":"Trabajo 3" },
+  { "type":"image", "src":"img/foto4.jpeg", "thumb":"img/foto4.jpeg", "alt":"Trabajo 4" },
+  { "type":"image", "src":"img/foto5.jpeg", "thumb":"img/foto5.jpeg", "alt":"Trabajo 5" },
+  { "type":"image", "src":"img/foto6.jpeg", "thumb":"img/foto6.jpeg", "alt":"Trabajo 6" },
+  { "type":"video", "src":"videos/video1.mp4", "poster":"img/video1-poster.jpg", "alt":"Video 1" },
+  { "type":"video", "src":"videos/video2.mp4", "poster":"img/video2-poster.jpg", "alt":"Video 2" }
+  // Agrega aquí todos tus archivos (cada objeto = una entrada)
