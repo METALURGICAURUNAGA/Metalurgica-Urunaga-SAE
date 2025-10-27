@@ -23,12 +23,13 @@
       margin-top: 30px;
     }
 
-    /* Sección galería */
     .galeria-container {
       position: relative;
       max-width: 1100px;
-      margin: 20px auto;
-      padding: 0 40px;
+      margin: 40px auto;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
     }
 
     .galeria {
@@ -67,7 +68,6 @@
       color: #9aa6b2;
     }
 
-    /* Botones de navegación */
     .btn {
       position: absolute;
       top: 50%;
@@ -84,10 +84,9 @@
     }
     .btn:hover { background: #1e90ff; }
 
-    .btn.left { left: 5px; }
-    .btn.right { right: 5px; }
+    .galeria-container .btn.left { left: 10px; }
+    .galeria-container .btn.right { right: 10px; }
 
-    /* Scrollbar minimalista */
     .galeria::-webkit-scrollbar { height: 6px; }
     .galeria::-webkit-scrollbar-thumb { background: #1e90ff; border-radius: 3px; }
 
@@ -101,9 +100,9 @@
 
   <h1>Galería de Trabajos</h1>
 
-  <!-- ===== GALERÍA DE FOTOS ===== -->
+  <!-- GALERÍA DE FOTOS -->
   <section class="galeria-container">
-    <h2>📸 Fotos</h2>
+    <h2>📸 Galería de Fotos</h2>
     <button class="btn left" onclick="moverGaleria('fotos', -1)">◀</button>
     <button class="btn right" onclick="moverGaleria('fotos', 1)">▶</button>
 
@@ -135,9 +134,9 @@
     </div>
   </section>
 
-  <!-- ===== GALERÍA DE VIDEOS ===== -->
+  <!-- GALERÍA DE VIDEOS -->
   <section class="galeria-container">
-    <h2>🎥 Videos</h2>
+    <h2>🎥 Galería de Videos</h2>
     <button class="btn left" onclick="moverGaleria('videos', -1)">◀</button>
     <button class="btn right" onclick="moverGaleria('videos', 1)">▶</button>
 
@@ -148,14 +147,12 @@
           <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
         </div>
       </a>
-
       <a href="https://www.youtube.com/watch?v=XXXXXXXXXXX" class="glightbox" data-gallery="videos" data-type="video">
         <div class="item">
           <img src="https://img.youtube.com/vi/XXXXXXXXXXX/hqdefault.jpg" alt="Otro Video">
           <p>Otro Video</p>
         </div>
       </a>
-
       <a href="https://www.youtube.com/watch?v=YYYYYYYYYYY" class="glightbox" data-gallery="videos" data-type="video">
         <div class="item">
           <img src="https://img.youtube.com/vi/YYYYYYYYYYY/hqdefault.jpg" alt="Video 3">
@@ -168,13 +165,11 @@
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    // Inicializar lightbox para imágenes y videos
     GLightbox({ selector: '.glightbox' });
 
-    // Función para mover galería con botones
     function moverGaleria(id, direccion) {
       const galeria = document.getElementById(id);
-      const desplazamiento = galeria.clientWidth * 0.8; // 80% del ancho visible
+      const desplazamiento = galeria.clientWidth * 0.8;
       galeria.scrollBy({ left: desplazamiento * direccion, behavior: 'smooth' });
     }
   </script>
