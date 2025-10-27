@@ -31,18 +31,19 @@
       border-radius: 12px;
     }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
+.galeria {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
 
-    .item {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.item {
+  flex: 0 0 280px; /* ancho fijo de cada tarjeta */
+  scroll-snap-align: start;
+}
 
     .item:hover {
       transform: scale(1.03);
