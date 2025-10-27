@@ -17,18 +17,25 @@
       padding: 0;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      margin: 20px 0;
       color: #1e90ff;
+      margin-top: 30px;
     }
 
-    /* GALERÍA HORIZONTAL */
+    /* Sección galería */
+    .galeria-container {
+      position: relative;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 40px;
+    }
+
     .galeria {
       display: flex;
       gap: 16px;
       overflow-x: auto;
-      padding: 20px;
+      scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
@@ -40,7 +47,10 @@
       scroll-snap-align: start;
       text-align: center;
       padding: 10px;
+      transition: transform 0.2s ease;
     }
+
+    .item:hover { transform: scale(1.05); }
 
     .item img {
       width: 100%;
@@ -48,11 +58,6 @@
       object-fit: cover;
       border-radius: 8px;
       cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .item img:hover {
-      transform: scale(1.05);
     }
 
     .item p {
@@ -61,14 +66,29 @@
       color: #9aa6b2;
     }
 
-    /* Barra scroll más elegante */
-    .galeria::-webkit-scrollbar {
-      height: 8px;
+    /* Botones de navegación */
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(30, 144, 255, 0.8);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 22px;
+      z-index: 10;
     }
-    .galeria::-webkit-scrollbar-thumb {
-      background: #1e90ff;
-      border-radius: 4px;
-    }
+    .btn:hover { background: #1e90ff; }
+
+    .btn.left { left: 5px; }
+    .btn.right { right: 5px; }
+
+    /* Scrollbar minimalista */
+    .galeria::-webkit-scrollbar { height: 6px; }
+    .galeria::-webkit-scrollbar-thumb { background: #1e90ff; border-radius: 3px; }
 
     @media (max-width: 520px) {
       .item { flex: 0 0 220px; }
@@ -80,52 +100,82 @@
 
   <h1>Galería de Trabajos</h1>
 
-  <div class="galeria">
-    <!-- 📸 FOTO -->
-    <a href="img/foto1.jpg" class="glightbox" data-gallery="galeria">
-      <div class="item">
-        <img src="img/foto1.jpg" alt="Trabajo 1">
-        <p>Trabajo 1</p>
-      </div>
-    </a>
+  <!-- ===== GALERÍA DE FOTOS ===== -->
+  <section class="galeria-container">
+    <h2>📸 Fotos</h2>
+    <button class="btn left" onclick="moverGaleria('fotos', -1)">◀</button>
+    <button class="btn right" onclick="moverGaleria('fotos', 1)">▶</button>
 
-    <!-- 📸 FOTO -->
-    <a href="img/foto2.jpg" class="glightbox" data-gallery="galeria">
-      <div class="item">
-        <img src="img/foto2.jpg" alt="Trabajo 2">
-        <p>Trabajo 2</p>
-      </div>
-    </a>
+    <div id="fotos" class="galeria">
+      <a href="img/foto1.jpg" class="glightbox" data-gallery="fotos">
+        <div class="item">
+          <img src="img/foto1.jpg" alt="Trabajo 1">
+          <p>Trabajo 1</p>
+        </div>
+      </a>
+      <a href="img/foto2.jpg" class="glightbox" data-gallery="fotos">
+        <div class="item">
+          <img src="img/foto2.jpg" alt="Trabajo 2">
+          <p>Trabajo 2</p>
+        </div>
+      </a>
+      <a href="img/foto3.jpg" class="glightbox" data-gallery="fotos">
+        <div class="item">
+          <img src="img/foto3.jpg" alt="Trabajo 3">
+          <p>Trabajo 3</p>
+        </div>
+      </a>
+      <a href="img/foto4.jpg" class="glightbox" data-gallery="fotos">
+        <div class="item">
+          <img src="img/foto4.jpg" alt="Trabajo 4">
+          <p>Trabajo 4</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
-    <!-- 🎥 VIDEO -->
-    <a href="https://www.youtube.com/watch?v=gu-KbNKS-XY" class="glightbox" data-gallery="galeria" data-type="video">
-      <div class="item">
-        <img src="https://img.youtube.com/vi/gu-KbNKS-XY/hqdefault.jpg" alt="FABRICACIÓN DE ENGRANAJE EN CREADORA">
-        <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
-      </div>
-    </a>
+  <!-- ===== GALERÍA DE VIDEOS ===== -->
+  <section class="galeria-container">
+    <h2>🎥 Videos</h2>
+    <button class="btn left" onclick="moverGaleria('videos', -1)">◀</button>
+    <button class="btn right" onclick="moverGaleria('videos', 1)">▶</button>
 
-    <!-- 🎥 OTRO VIDEO -->
-    <a href="https://www.youtube.com/watch?v=XXXXXXX" class="glightbox" data-gallery="galeria" data-type="video">
-      <div class="item">
-        <img src="https://img.youtube.com/vi/XXXXXXX/hqdefault.jpg" alt="Otro Video">
-        <p>Otro Video</p>
-      </div>
-    </a>
+    <div id="videos" class="galeria">
+      <a href="https://www.youtube.com/watch?v=gu-KbNKS-XY" class="glightbox" data-gallery="videos" data-type="video">
+        <div class="item">
+          <img src="https://img.youtube.com/vi/gu-KbNKS-XY/hqdefault.jpg" alt="FABRICACIÓN DE ENGRANAJE EN CREADORA">
+          <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
+        </div>
+      </a>
 
-    <!-- 📸 FOTO -->
-    <a href="img/foto3.jpg" class="glightbox" data-gallery="galeria">
-      <div class="item">
-        <img src="img/foto3.jpg" alt="Trabajo 3">
-        <p>Trabajo 3</p>
-      </div>
-    </a>
-  </div>
+      <a href="https://www.youtube.com/watch?v=XXXXXXXXXXX" class="glightbox" data-gallery="videos" data-type="video">
+        <div class="item">
+          <img src="https://img.youtube.com/vi/XXXXXXXXXXX/hqdefault.jpg" alt="Otro Video">
+          <p>Otro Video</p>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=YYYYYYYYYYY" class="glightbox" data-gallery="videos" data-type="video">
+        <div class="item">
+          <img src="https://img.youtube.com/vi/YYYYYYYYYYY/hqdefault.jpg" alt="Video 3">
+          <p>Video 3</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
+    // Inicializar lightbox para imágenes y videos
     GLightbox({ selector: '.glightbox' });
+
+    // Función para mover galería con botones
+    function moverGaleria(id, direccion) {
+      const galeria = document.getElementById(id);
+      const desplazamiento = galeria.clientWidth * 0.8; // 80% del ancho visible
+      galeria.scrollBy({ left: desplazamiento * direccion, behavior: 'smooth' });
+    }
   </script>
 
 </body>
