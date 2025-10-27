@@ -34,18 +34,66 @@
       <h2 style="margin-top:18px">Galería de Trabajos</h2>
 <div class="galeria">
   <!-- Fotos -->
-  <div class="item"><img src="img/foto1.jpg" alt="Trabajo 1"><p>Trabajo 1</p></div>
-  <div class="item"><img src="img/foto2.jpg" alt="Trabajo 2"><p>Trabajo 2</p></div>
-  <div class="item"><img src="img/foto3.jpg" alt="Trabajo 3"><p>Trabajo 3</p></div>
-  <div class="item"><img src="img/foto4.jpg" alt="Trabajo 4"><p>Trabajo 4</p></div>
-  <div class="item"><img src="img/foto5.jpg" alt="Trabajo 5"><p>Trabajo 5</p></div>
-  <div class="item"><img src="img/foto6.jpg" alt="Trabajo 6"><p>Trabajo 6</p></div>
-  <div class="item"><video src="https://youtube.com/shorts/gu-KbNKS-XY" controls muted></video><p>FABRICACION DE ENGRANAJE EN CREADORA</p></div>
-  <div class="item"><video src="img/video2.mp4" controls muted></video><p>Video 2</p></div>
-  <div class="item"><video src="img/video3.mp4" controls muted></video><p>Video 3</p></div>
-  <div class="item"><video src="img/video4.mp4" controls muted></video><p>Video 4</p></div>
-  <div class="item"><video src="img/video5.mp4" controls muted></video><p>Video 5</p></div>
-  <div class="item"><video src="img/video6.mp4" controls muted></video><p>Video 6</p></div>
+</style>
+</head>
+<body>
+  <!-- GALERÍA DE FOTOS -->
+  <h2>Galería de Fotos</h2>
+  <div class="contenedor">
+    <a href="img/foto1.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto1.jpg" alt="Trabajo 1">
+      <p>Trabajo 1</p>
+    </a>
+
+    <a href="img/foto2.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto2.jpg" alt="Trabajo 2">
+      <p>Trabajo 2</p>
+    </a>
+
+    <a href="img/foto3.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto3.jpg" alt="Trabajo 3">
+      <p>Trabajo 3</p>
+    </a>
+
+    <a href="img/foto4.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto4.jpg" alt="Trabajo 4">
+      <p>Trabajo 4</p>
+    </a>
+
+    <a href="img/foto5.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto5.jpg" alt="Trabajo 5">
+      <p>Trabajo 5</p>
+    </a>
+
+    <a href="img/foto6.jpg" class="glightbox" data-gallery="fotos">
+      <img src="img/foto6.jpg" alt="Trabajo 6">
+      <p>Trabajo 6</p>
+    </a>
+  </div>
+
+  <!-- GALERÍA DE VIDEOS -->
+  <h2>Galería de Videos</h2>
+  <div class="contenedor">
+    <a href="https://www.youtube.com/watch?v=gu-KbNKS-XY" class="glightbox" data-gallery="videos" data-type="video">
+      <img src="https://img.youtube.com/vi/gu-KbNKS-XY/hqdefault.jpg" alt="FABRICACIÓN DE ENGRANAJE EN CREADORA">
+      <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
+    </a>
+
+    <!-- Puedes agregar más videos así -->
+    <!--
+    <a href="https://www.youtube.com/watch?v=ID_DEL_VIDEO" class="glightbox" data-gallery="videos" data-type="video">
+      <img src="https://img.youtube.com/vi/ID_DEL_VIDEO/hqdefault.jpg" alt="Título del Video">
+      <p>Título del Video</p>
+    </a>
+    -->
+  </div>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightboxFotos = GLightbox({ selector: '.glightbox[data-gallery="fotos"]' });
+    const lightboxVideos = GLightbox({ selector: '.glightbox[data-gallery="videos"]' });
+  </script>
      </div>
   </section>
 
