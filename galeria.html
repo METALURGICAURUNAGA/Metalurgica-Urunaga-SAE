@@ -41,11 +41,17 @@
 }
 
 .item {
-  flex: 0 0 350px; /* ahora cada tarjeta mide 350px de ancho */
+  flex: 0 0 300px;   /* cada tarjeta ahora mide 500px de ancho */
   scroll-snap-align: start;
 }
 
-.item img, 
+.item img {
+  width: 100%;
+  height: 300px;     /* menos alto que ancho → rectángulo horizontal */
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
 .item video {
   width: 100%;
   height: 350px;   /* mismo valor que el ancho → cuadrado */
