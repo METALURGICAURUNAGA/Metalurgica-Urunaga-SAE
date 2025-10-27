@@ -5,114 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galería de Trabajos — Metalúrgica Urunaga</title>
   <meta name="description" content="Galería de trabajos: fotos y videos de Metalúrgica Urunaga"/>
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
   <style>
-    :root{ --bg:#0b0f12; --muted:#9aa6b2; --accent:#1e90ff; --card:#0f1720; --radius:12px; --maxw:1100px; font-family:Inter,system-ui,Arial; color:#e6eef6}
-    body{background:#000 url('img/fondo.jpeg') center top/cover fixed no-repeat;margin:0;color:#e6eef6}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px}
-    a.back{color:var(--accent);text-decoration:none;margin-bottom:12px;display:inline-block}
-    h1{margin:8px 0 12px}
-    .galeria{display:flex;gap:16px;overflow-x:auto;padding:12px 6px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-    .item{flex:0 0 320px;min-width:240px;background:rgba(255,255,255,0.02);border-radius:12px;padding:10px;scroll-snap-align:start}
-    .item img, .item video{width:100%;height:200px;object-fit:cover;border-radius:8px;display:block}
-    .controls{text-align:center;margin-top:12px}
-    button{background:linear-gradient(90deg,var(--accent),#2b6fb3);color:#071226;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
-    @media (max-width:520px){ .item{flex:0 0 220px} .item img,.item video{height:140px} }
+    :root {
+      --bg:#0b0f12; --muted:#9aa6b2; --accent:#1e90ff;
+      --card:#0f1720; --radius:12px; --maxw:1100px;
+      font-family:Inter,system-ui,Arial; color:#e6eef6
+    }
+    body {
+      background:#000 url('img/fondo.jpeg') center top/cover fixed no-repeat;
+      margin:0; color:#e6eef6;
+    }
+    .wrap { max-width:var(--maxw); margin:0 auto; padding:28px; }
+    a.back { color:var(--accent); text-decoration:none; margin-bottom:12px; display:inline-block; }
+    h1, h2 { text-align:center; margin:20px 0 10px; }
+
+    .contenedor {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:15px;
+      max-width:1000px;
+      margin:0 auto;
+      padding:10px;
+    }
+    .contenedor a {
+      text-decoration:none;
+      color:#e6eef6;
+      text-align:center;
+      background:rgba(255,255,255,0.05);
+      border-radius:12px;
+      padding:10px;
+      transition:transform 0.2s ease;
+    }
+    .contenedor a:hover { transform:scale(1.05); }
+    .contenedor img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:8px;
+    }
+    p { margin:6px 0 0; font-size:0.9em; color:var(--muted); }
+    @media (max-width:520px){
+      .contenedor img { height:140px; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <a class="back" href="index.html">← Volver</a>
     <h1>Galería de Trabajos</h1>
-    <p style="color:var(--muted)">Se muestran imágenes y videos. Cargaré los contenidos de forma progresiva para que la página no quede pesada.</p>
+    <p style="color:var(--muted); text-align:center;">Imágenes y videos de nuestros trabajos realizados.</p>
 
-    <!-- Contenedor donde se insertan los items -->
-    <div id="galeria-js" class="galeria" aria-live="polite"></div>
- </div>
-  </section>
+    <!-- GALERÍA DE FOTOS -->
+    <h2>Galería de Fotos</h2>
+    <div class="contenedor">
+      <a href="img/foto1.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto1.jpg" alt="Trabajo 1"><p>Trabajo 1</p>
+      </a>
+      <a href="img/foto2.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto2.jpg" alt="Trabajo 2"><p>Trabajo 2</p>
+      </a>
+      <a href="img/foto3.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto3.jpg" alt="Trabajo 3"><p>Trabajo 3</p>
+      </a>
+      <a href="img/foto4.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto4.jpg" alt="Trabajo 4"><p>Trabajo 4</p>
+      </a>
+      <a href="img/foto5.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto5.jpg" alt="Trabajo 5"><p>Trabajo 5</p>
+      </a>
+      <a href="img/foto6.jpg" class="glightbox" data-gallery="fotos">
+        <img src="img/foto6.jpg" alt="Trabajo 6"><p>Trabajo 6</p>
+      </a>
+    </div>
 
-  <section id="galeria">
-      <h2 style="margin-top:18px">Galería de Trabajos</h2>
-<div class="galeria">
-  <!-- Fotos -->
-</style>
-</head>
-<body>
-  <!-- GALERÍA DE FOTOS -->
-  <h2>Galería de Fotos</h2>
-  <div class="contenedor">
-    <a href="img/foto1.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto1.jpg" alt="Trabajo 1">
-      <p>Trabajo 1</p>
-    </a>
+    <!-- GALERÍA DE VIDEOS -->
+    <h2>Galería de Videos</h2>
+    <div class="contenedor">
+      <a href="https://www.youtube.com/watch?v=gu-KbNKS-XY"
+         class="glightbox"
+         data-gallery="videos"
+         data-type="video">
+        <img src="https://img.youtube.com/vi/gu-KbNKS-XY/hqdefault.jpg"
+             alt="FABRICACIÓN DE ENGRANAJE EN CREADORA">
+        <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
+      </a>
 
-    <a href="img/foto2.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto2.jpg" alt="Trabajo 2">
-      <p>Trabajo 2</p>
-    </a>
-
-    <a href="img/foto3.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto3.jpg" alt="Trabajo 3">
-      <p>Trabajo 3</p>
-    </a>
-
-    <a href="img/foto4.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto4.jpg" alt="Trabajo 4">
-      <p>Trabajo 4</p>
-    </a>
-
-    <a href="img/foto5.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto5.jpg" alt="Trabajo 5">
-      <p>Trabajo 5</p>
-    </a>
-
-    <a href="img/foto6.jpg" class="glightbox" data-gallery="fotos">
-      <img src="img/foto6.jpg" alt="Trabajo 6">
-      <p>Trabajo 6</p>
-    </a>
-  </div>
-
-  <!-- GALERÍA DE VIDEOS -->
-  <h2>Galería de Videos</h2>
-  <div class="contenedor">
-    <a href="https://www.youtube.com/watch?v=gu-KbNKS-XY" class="glightbox" data-gallery="videos" data-type="video">
-      <img src="https://img.youtube.com/vi/gu-KbNKS-XY/hqdefault.jpg" alt="FABRICACIÓN DE ENGRANAJE EN CREADORA">
-      <p>FABRICACIÓN DE ENGRANAJE EN CREADORA</p>
-    </a>
-
-    <!-- Puedes agregar más videos así -->
-    <!--
-    <a href="https://www.youtube.com/watch?v=ID_DEL_VIDEO" class="glightbox" data-gallery="videos" data-type="video">
-      <img src="https://img.youtube.com/vi/ID_DEL_VIDEO/hqdefault.jpg" alt="Título del Video">
-      <p>Título del Video</p>
-    </a>
-    -->
+      <!-- Ejemplo de otro video -->
+      <!--
+      <a href="https://www.youtube.com/watch?v=OTRO_ID"
+         class="glightbox"
+         data-gallery="videos"
+         data-type="video">
+        <img src="https://img.youtube.com/vi/OTRO_ID/hqdefault.jpg"
+             alt="Otro video del canal">
+        <p>Otro video del canal</p>
+      </a>
+      -->
+    </div>
   </div>
 
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    const lightboxFotos = GLightbox({ selector: '.glightbox[data-gallery="fotos"]' });
-    const lightboxVideos = GLightbox({ selector: '.glightbox[data-gallery="videos"]' });
-  </script>
-     </div>
-  </section>
-
-
-    <div class="controls">
-      <button id="cargar-mas">deslisa ala derecha</button>
-    </div>
-  </div>
-
-  <!-- small loader script: require gallery.json (o ajustar la URL) -->
-  <script src="gallery-loader.js"></script>
-  <script>
-    // Inicializa el loader: cambia listUrl si tu JSON está en otra ruta
-    galleryLoader.init({
-      containerId: 'galeriy-loader.js',
-      listUrl: '/galery.json',
-      pageSize: 8,
-      typeFilter: null // null = todo (imágenes y videos). Puedes usar 'image' o 'video'
-    });
+    GLightbox({ selector: '.glightbox[data-gallery="fotos"]' });
+    GLightbox({ selector: '.glightbox[data-gallery="videos"]' });
   </script>
 </body>
 </html>
