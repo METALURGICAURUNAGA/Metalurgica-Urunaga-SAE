@@ -22,7 +22,6 @@
       color: #1e90ff;
       margin: 30px 0 20px;
     }
-
     .galeria-container {
       max-width: 1200px;
       margin: 40px auto;
@@ -31,9 +30,9 @@
       border-radius: 12px;
     }
 
-.galeria {
+  .galeria {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -41,20 +40,20 @@
 }
 
 .item {
-  flex: 0 0 300px;   /* cada tarjeta ahora mide 500px de ancho */
+  flex: 0 0 500px;   /* cada tarjeta ahora mide 500px de ancho */
   scroll-snap-align: start;
 }
 
 .item img {
   width: 100%;
-  height: 300px;     /* menos alto que ancho → rectángulo horizontal */
+  height: 100px;     /* menos alto que ancho → rectángulo horizontal */
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
 }
 .item video {
   width: 100%;
-  height: 350px;   /* mismo valor que el ancho → cuadrado */
+  height: 100px;   /* mismo valor que el ancho → cuadrado */
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -66,7 +65,7 @@
 
     .item video {
       width: 100%;
-      height: 220px;
+      height: 100px;
       object-fit: cover;
       display: block;
       cursor: pointer;
